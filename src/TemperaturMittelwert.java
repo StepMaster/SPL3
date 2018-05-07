@@ -6,7 +6,8 @@ public class TemperaturMittelwert {
 		int x = 0;
 		int unter10Grad = 0;
 		int zwischen10und20 = 0;
-		int groesser20 = 0;
+		int groesser20undkleiner30 = 0;
+		int groesser30 = 0;
 		
 		int[] temp = new int[1000];
 		for (int i = 0; i < temp.length; i++) {
@@ -21,14 +22,18 @@ public class TemperaturMittelwert {
 				zwischen10und20++;
 			}
 			else if(x == 3) {
-				groesser20++;
+				groesser20undkleiner30++;
+			}
+			else if(x == 4) {
+				groesser30++;
 			}
 			
 		}
 		
 		System.out.println(unter10Grad + " Werte < 10 Grad.");
 		System.out.println(zwischen10und20 + " Werte zwischen 10 und 20 Grad.");
-		System.out.println(groesser20 + " Werte >= 20 Grad.");
+		System.out.println(groesser20undkleiner30 + " Werte zwischen 20 und 30 Grad.");
+		System.out.println(groesser30 + " Werte >= 30 Grad.");
 		
 
 	}
@@ -47,8 +52,12 @@ public class TemperaturMittelwert {
 				counter=2;
 				return counter;
 			}
-			else if (temp >= 20 ) {
+			else if (temp >= 20 && temp <30 ) {
 				counter=3;
+				return counter;
+			}
+			else if (temp >= 30 ) {
+				counter=4;
 				return counter;
 			}
 		}
