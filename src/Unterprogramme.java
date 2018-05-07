@@ -8,6 +8,7 @@ public class Unterprogramme {
 		char[] z = text.toCharArray();
 		zeichenZaehlen(z, 'e');
 		zeichenZaehlen(z, 'i');
+		zeichenZaehlen(z, 'h');
 	}
 
 	public static void zeichenZaehlen(char[] z, char x) {
