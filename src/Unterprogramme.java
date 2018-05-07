@@ -9,6 +9,8 @@ public class Unterprogramme {
 		zeichenZaehlen(z, 'e');
 		zeichenZaehlen(z, 'i');
 		zeichenZaehlen(z, 'h');
+		
+		System.out.println(anzahlZaehlen(z, 'ä'));
 	}
 
 	public static void zeichenZaehlen(char[] z, char x) {
@@ -19,6 +21,16 @@ public class Unterprogramme {
 			}
 		}
 		System.out.println("Anzahl " + x + "'s im Text: " + counter);
+	}
+	
+	public static int anzahlZaehlen(char[] z, char x) {
+		int counter = 0;
+		for (int i = 0; i < z.length; i++) {
+			if (z[i] == x) {
+				counter++;
+			}
+		}
+		return counter;
 	}
 
 }
